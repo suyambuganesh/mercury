@@ -1,0 +1,70 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>DashBoard</title>
+
+        <link rel="icon" type="image/x-icon" href="/assets/images/logo.png" />
+
+        <link rel="stylesheet" href="/assets/stylesheets/application-all.css">
+
+        <script type="text/javascript" src="/assets/javascripts/dashing/es5-shim.js"></script>
+        <script type="text/javascript" src="/assets/javascripts/dashing/jquery.js"></script>
+        <script type="text/javascript" src="/assets/javascripts/dashing/batman.js"></script>
+        <script type="text/javascript" src="/assets/javascripts/dashing/batman.jquery.js"></script>
+
+
+        <script type="text/javascript" src="/assets/javascripts/gridster/jquery.gridster.js"></script>
+        <script type="text/javascript" src="/assets/javascripts/gridster/jquery.leanModal.min.js"></script>
+
+
+        <script type="text/javascript" src="/assets/javascripts/d3-3.2.8.js"></script>
+        <script type="text/javascript" src="/assets/javascripts/jquery.knob.js"></script>
+        <script type="text/javascript" src="/assets/javascripts/rickshaw.min.js"></script>
+
+        <script type="text/javascript" src="/assets/javascripts/dashing.js"></script>
+        <script type="text/javascript" src="/assets/javascripts/application.js"></script>
+    </head>
+    <body>
+
+    <script type='text/javascript'>
+        $(function () {
+            Dashing.widget_base_dimensions = [370, 340]
+        });
+    </script>
+    <div class="container">
+        <div class="gridster">
+        <ul>
+            <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+                <div data-id="welcome" data-view="Text" data-title="Hello" data-text="This is your shiny new dashboard."
+                     data-moreinfo="Protip: You can drag the widgets around!"></div>
+            </li>
+
+            <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+                <div data-id="synergy" data-view="Meter" data-title="Synergy" data-min="0" data-max="100"></div>
+            </li>
+
+            <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" data-unordered="true">
+                <div data-id="commiters" data-view="List" data-unordered="true" data-title="Top Commiters"
+                     data-moreinfo="# of commits per day"></div>
+             </li>
+
+            <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+                <div data-id="commitsProgress" data-view="Number" data-title="Commits Progress"
+                     data-moreinfo="# of commits per day" data-prefix="#"></div>
+            </li>
+
+            <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+                <div data-id="convergence" data-view="Graph" data-title="Convergence"
+                     style="background-color:#ff9618"></div>
+            </li>
+            <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+                <div data-id="clocks" data-view="Clock" data-title="Clocks"></div>
+                <i class="icon-time icon-background"></i>
+            </li>
+        </ul>
+    </div>
+    </div>
+    </body>
+    </html>
