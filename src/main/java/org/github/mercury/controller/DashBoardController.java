@@ -28,6 +28,20 @@ public class DashBoardController {
         return sseEmitter;
     }
 
+    @RequestMapping("events/{application}")
+    public SseEmitter getEvents(@PathVariable
+    final String application) {
+        LOGGER.info("initiate event stream for application {}", application);
+        SseEmitter sseEmitter = new SseEmitter();
+        try {
+            sseEmitter.send("1");
+        }
+        catch (IOException e) {
+            LOGGER.error("Error while sending message to SSE stream. {}", e);
+        }
+        return sseEmitter;
+    }
+
     @RequestMapping(value = "/")
     public String loadHomePage(final Model model) {
         return "index.html";
@@ -38,5 +52,11 @@ public class DashBoardController {
     final String widget) {
         LOGGER.info("request widget for {}", widget);
         return "redirect:/widgets/" + widget + "/" + widget + ".html";
+    }
+
+    @RequestMapping(value = "/{dashboard}")
+    public String loadDashboard(@PathVariable
+    final String dashboard) {
+        return dashboard + ".html";
     }
 }

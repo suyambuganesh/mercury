@@ -9,7 +9,7 @@ public class JiraAggregator implements Aggregator {
 
     @Override
     public String id() {
-        throw new UnsupportedOperationException("Method not implemented");
+        return "JIRA";
     }
 
     @Override

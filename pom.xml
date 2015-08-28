@@ -26,9 +26,14 @@
         <assets.destination>${project.build.directory}/classes/static</assets.destination>
 
         <!-- Dependencies -->
-        <rxjava.version>1.0.13</rxjava.version>
+        <rxjava.version>1.0.14</rxjava.version>
         <!-- <jira-rest-java-client-core.version>2.0.0-m15</jira-rest-java-client-core.version> -->
         <commons-lang3.version>3.4</commons-lang3.version>
+        <reactor.version>2.0.5.RELEASE</reactor.version>
+        <hystrix.version>1.4.14</hystrix.version>
+        <jersey.version>2.21</jersey.version>
+
+        <jira.version>0.5</jira.version>
     </properties>
 
     <dependencies>
@@ -48,14 +53,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
-        <!-- <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-freemarker</artifactId>
-        </dependency> -->
-        <!-- <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency> -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -69,40 +66,40 @@
             <artifactId>rxjava</artifactId>
             <version>${rxjava.version}</version>
         </dependency>
-        <!-- <dependency> <groupId>com.atlassian.jira</groupId> <artifactId>jira-rest-java-client-core</artifactId> 
-            <version>${jira-rest-java-client-core.version}</version> <exclusions> <exclusion> 
-            <artifactId>httpcore</artifactId> <groupId>org.apache.httpcomponents</groupId> 
-            </exclusion> <exclusion> <artifactId>httpclient</artifactId> <groupId>org.apache.httpcomponents</groupId> 
-            </exclusion> </exclusions> </dependency> -->
-        <!-- <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpcore</artifactId>
-            <version>4.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpcore-nio</artifactId>
-            <version>4.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpasyncclient</artifactId>
-            <version>4.0-beta3</version>
-        </dependency> -->
         <dependency>
             <groupId>net.rcarz</groupId>
             <artifactId>jira-client</artifactId>
-            <version>0.5</version>
+            <version>${jira.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>${commons-lang3.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+            <version>${reactor.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-core</artifactId>
+            <version>${hystrix.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-metrics-event-stream</artifactId>
+            <version>${hystrix.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-javanica</artifactId>
+            <version>${hystrix.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.ext.rx</groupId>
+            <artifactId>jersey-rx-client-rxjava</artifactId>
+            <version>${jersey.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
